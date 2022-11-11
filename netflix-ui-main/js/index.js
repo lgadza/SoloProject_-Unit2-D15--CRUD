@@ -35,13 +35,7 @@ function renderDocumentaries(arrOfDocumentaries) {
       div.classList = "col-md-2 mt-4";
       let card = `<div class=" card ">
           <img src="${imageUrl}" class="  movie-img card-img-top ">
-          <div class="card-body">
-                <h5 class="documentry-name">${name}</h5>
-                
-                
-                </div class="view d-flex just-content-center">
-                <a class"col " href="details.html?movieId=${_id}">VIEW </a>
-                </div>
+  
                 
                 
                 </div>
@@ -95,13 +89,7 @@ function renderDocumentaries(arrOfAction) {
       div.classList = "col-md-2 mt-4";
       let card = `<div class=" card ">
           <img src="${imageUrl}" class=" w-100 movie-img card-img-top ">
-          <div class="card-body">
-                <h5 class="documentry-name">${name}</h5>
-                
-                
-                </div class="view d-flex just-content-center">
-                <a class"col " href="details.html?movieId=${_id}">VIEW MORE </a>
-                </div>
+          
                 
                 
                 </div>
