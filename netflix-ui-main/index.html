@@ -13,6 +13,71 @@
       crossorigin="anonymous"
     />
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      .card-img-top {
+        height: 73px;
+        object-fit: cover;
+      }
+      .book-price {
+        color: red;
+        font-weight: bold;
+      }
+      .documentry-name {
+        overflow: hidden;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .documentry-description {
+        overflow: hidden;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .btn {
+        display: block;
+        margin: auto;
+        border: 1px solid red;
+        color: red;
+      }
+      .btn-skip {
+        border: 1px solid green;
+        color: green;
+      }
+      .btn:hover {
+        background-color: coral;
+        color: white;
+      }
+
+      .card {
+        /* background-color: coral; */
+      }
+      .added-item {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background-color: white;
+        border-radius: 50%;
+      }
+      input {
+        position: relative;
+      }
+      .search-results {
+        position: absolute;
+        bottom: -10px;
+        margin: auto;
+        margin-left: 45px;
+        width: 205px;
+        background-color: coral;
+      }
+      .view {
+        font-size: 0.5rem;
+      }
+    </style>
+
     <title>Netflix</title>
   </head>
 
@@ -328,7 +393,7 @@
           </button>
         </div>
       </div>
-      <div class="movie-gallery m-2">
+      <div class="movie-gallery new-release m-2">
         <h5 class="text-light mt-2 mb-2">New Releases</h5>
         <div id="new-releases" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -336,7 +401,7 @@
               <div class="movie-row">
                 <div class="row">
                   <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media12.jpg" />
+                    <!-- <img class="movie-cover" src="./assets/media/media12.jpg" />
                   </div>
                   <div class="col-md-2">
                     <img class="movie-cover" src="./assets/media/media13.jpg" />
@@ -351,7 +416,7 @@
                     <img class="movie-cover" src="./assets/media/media16.jpg" />
                   </div>
                   <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media17.jpg" />
+                    <img class="movie-cover" src="./assets/media/media17.jpg" /> -->
                   </div>
                 </div>
               </div>
@@ -524,6 +589,6 @@
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

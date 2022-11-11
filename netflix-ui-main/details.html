@@ -14,10 +14,46 @@
     <title>Netflix</title>
   </head>
   <style>
-    #movie-category {
-      font-weight: normal;
-      font-size: 16px;
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .book-price {
+      color: red;
+      font-weight: bold;
+    }
+    .documentry-name {
+      overflow: hidden;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .documentry-description {
+      overflow: hidden;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .added-item {
+      position: absolute;
+      right: 10px;
+      top: 10px;
       background-color: white;
+      border-radius: 50%;
+    }
+    input {
+      position: relative;
+    }
+    .search-results {
+      position: absolute;
+      bottom: -10px;
+      margin: auto;
+      margin-left: 45px;
+      width: 205px;
+      background-color: coral;
     }
   </style>
 
@@ -41,7 +77,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="http://ubeytdemir.me/netflix-ui"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Tv Shows</a>
@@ -53,7 +91,7 @@
               <a class="nav-link" href="#">Recently Added</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="list.html">My List</a>
+              <a class="nav-link" href="#">My List</a>
             </li>
           </ul>
 
@@ -144,59 +182,20 @@
     </nav>
     <div class="account-page">
       <div class="container p-5">
-        <h3>Back Movies Office</h3>
+        <h3>My List</h3>
         <hr />
-      </div>
-      <!-- Content -->
-      <div class="container mb-5">
-        <div class="row justify-content-center">
-          <div class="col-md-6 mt-5">
-            <h1>Add Movie to My List</h1>
-            <form onsubmit="onFormSubmit(event)" id="event-form">
-              <div class="form-group mt-3">
-                <label for="movie-name">Movie Tittle:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="movie-name"
-                  required
-                  placeholder="Titanic"
-                />
-              </div>
-              <div class="form-group mt-3">
-                <label for="movie-description">Movie Description:</label>
-                <textarea
-                  class="form-control"
-                  id="movie-description"
-                ></textarea>
-              </div>
-              <div class="form-group mt-3">
-                <label for="movie-category">Movie Genres:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="movie-category"
-                  placeholder="Horror"
-                />
-              </div>
-              <div class="form-group mt-3">
-                <label for="movie-img">Movie Cover Image:</label>
-                <input
-                  type="url"
-                  class="form-control"
-                  id="cover-img"
-                  placeholder="https://www.bing.com/images/"
-                  name="movie-name"
-                />
-              </div>
-              <button
-                id="add-button"
-                type="submit"
-                class="btn btn-primary my-4"
-              >
-                Add Movie
+        <div class="row card-deck m-3">
+          <div class="row justify-content-center">
+            <div class="col-md-8 mt-5">
+              <h6 class="mb-3">Product Details</h6>
+              <div id="product-details"></div>
+              <button type="button" class="btn btn-success" onclick="onEdit()">
+                Edit Product
               </button>
-            </form>
+              <button type="button" class="btn btn-danger" onclick="onDelete()">
+                Delete Product
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -207,6 +206,6 @@
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/back.js"></script>
+    <script src="js/details.js"></script>
   </body>
 </html>
