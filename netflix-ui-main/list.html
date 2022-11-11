@@ -13,6 +13,66 @@
     <link href="css/styles.css" rel="stylesheet" />
     <title>Netflix</title>
   </head>
+  <style>
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .book-price {
+      color: red;
+      font-weight: bold;
+    }
+    .documentry-name {
+      overflow: hidden;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .documentry-description {
+      overflow: hidden;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .btn {
+      display: block;
+      margin: auto;
+      border: 1px solid red;
+      color: red;
+    }
+    .btn-skip {
+      border: 1px solid green;
+      color: green;
+    }
+    .btn:hover {
+      background-color: coral;
+      color: white;
+    }
+
+    .card {
+      /* background-color: coral; */
+    }
+    .added-item {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    input {
+      position: relative;
+    }
+    .search-results {
+      position: absolute;
+      bottom: -10px;
+      margin: auto;
+      margin-left: 45px;
+      width: 205px;
+      background-color: coral;
+    }
+  </style>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -139,77 +199,19 @@
     </nav>
     <div class="account-page">
       <div class="container p-5">
-        <h3>Back Movies Office</h3>
+        <h3>My List</h3>
         <hr />
-      </div>
-      <!-- Content -->
-    </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6 mt-5">
-          <h1>CRUDAZON Stoke</h1>
-          <form onsubmit="onFormSubmit(event)" id="event-form">
-            <div class="form-group">
-              <label for="product-name">Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="product-name"
-                required
-                placeholder="Phone"
-              />
-            </div>
-            <div class="form-group">
-              <label for="product-description">Product Description</label>
-              <textarea
-                class="form-control"
-                id="product-description"
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <label for="product-brand">Brand</label>
-              <input
-                type="text"
-                class="form-control"
-                id="product-brand"
-                placeholder="Nokia"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="product-img">Image</label>
-              <input
-                type="url"
-                class="form-control"
-                id="product-img"
-                required
-                placeholder="https://www.bing.com/images/"
-                name="product-name"
-              />
-            </div>
-            <div class="form-group">
-              <label for="product-price">Price</label>
-              <input
-                type="number"
-                class="form-control"
-                id="product-price"
-                required
-                placeholder="$USD 100"
-              />
-            </div>
-
-            <button id="add-button" type="submit" class="btn btn-primary">
-              Add Product
-            </button>
-          </form>
+        <div class="row card-deck m-3">
+          <!-- <ul class="list-group col-6"></ul> -->
         </div>
       </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/back.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
