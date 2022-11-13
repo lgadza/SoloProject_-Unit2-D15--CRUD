@@ -1,5 +1,44 @@
 //headers
+async function getAllMovies() {
+  const response = await Promise.all([
+    fetch("https://striveschool-api.herokuapp.com/api/movies/Documentary", {
+      // method: "POST",
+      headers: {
+        "Content-Type": "application/json",
 
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzZjZjQwZmQ0YmUzZDAwMTU4NDVmZWQiLCJpYXQiOjE2NjgxMzYyMjMsImV4cCI6MTY2OTM0NTgyM30.VUS9Kr-_8IzdCkkChoj2bIHL51bsb4NkyqT8De780Ec",
+      },
+    }),
+    fetch("https://striveschool-api.herokuapp.com/api/movies/Drama", {
+      // method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzZjZjQwZmQ0YmUzZDAwMTU4NDVmZWQiLCJpYXQiOjE2NjgxMzYyMjMsImV4cCI6MTY2OTM0NTgyM30.VUS9Kr-_8IzdCkkChoj2bIHL51bsb4NkyqT8De780Ec",
+      },
+    }),
+    fetch("https://striveschool-api.herokuapp.com/api/movies/Romantic", {
+      // method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzZjZjQwZmQ0YmUzZDAwMTU4NDVmZWQiLCJpYXQiOjE2NjgxMzYyMjMsImV4cCI6MTY2OTM0NTgyM30.VUS9Kr-_8IzdCkkChoj2bIHL51bsb4NkyqT8De780Ec",
+      },
+    }),
+    fetch("https://striveschool-api.herokuapp.com/api/movies/Action", {
+      // method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzZjZjQwZmQ0YmUzZDAwMTU4NDVmZWQiLCJpYXQiOjE2NjgxMzYyMjMsImV4cCI6MTY2OTM0NTgyM30.VUS9Kr-_8IzdCkkChoj2bIHL51bsb4NkyqT8De780Ec",
+      },
+    }),
+  ]);
+}
 async function getDocumentaries() {
   const response = await fetch(
     "https://striveschool-api.herokuapp.com/api/movies/Documentary",

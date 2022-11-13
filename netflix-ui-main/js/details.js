@@ -19,24 +19,27 @@ async function getMovie() {
       return film;
     }
   });
+  return getFilm;
 }
-// console.log();
+// console.log(getMovie((data) => console.log(data)));
 
 let row = document.querySelector("#movie-details");
 
-function renderMovies(film) {
-  console.log(film);
-  let container = document.querySelector("#movie-details");
+function renderMovies(getFilm) {
+  console.log(getFilm);
+  let container = document.querySelector(".movie-details");
+  console.log(container);
 
   container.innerHTML = `
-        <h2 class="display-4">${film.name}</h2>
-        <p>${film.description}</p>
-        <h3 class="mb-3">${film.category}<h3>
+        <img src="${getFilm[0].imageUrl}" class="  movie-img card-img-top ">
+        <h2 class="display-4">Title: ${getFilm[0].name}</h2>
+        <p>Description: <hr>${getFilm[0].description}</p>
+        <h3 class="mb-3">Category: ${getFilm[0].category}<h3>
         <h6 class="pl-2 py-3 bg-light">Server Details</h6>
         <ul class="list-group list-group-flush mb-4">
-          <li class="list-group-item pl-2"><b>id: </b>${film._id}</li>
-          <li class="list-group-item pl-2"><b>createdAt: </b>${film.createdAt}</li>
-          <li class="list-group-item pl-2"><b>updatedAt: </b>${film.updatedAt}</li>
+          <li class="list-group-item pl-2"><b>id: </b>${getFilm[0]._id}</li>
+          <li class="list-group-item pl-2"><b>createdAt: </b>${getFilm[0].createdAt}</li>
+          <li class="list-group-item pl-2"><b>updatedAt: </b>${getFilm[0].updatedAt}</li>
         </ul>`;
 }
 
